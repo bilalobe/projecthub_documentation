@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html">
+    <h1 id="projecthub">ProjectHub</h1>
+    <p><strong>A comprehensive platform for managing student projects, component evaluations, and project distribution,
+        built with JavaFX, Spring Boot, and PostgreSQL.</strong></p>
+    <p><a href="https://openjfx.io/"><img src="https://img.shields.io/badge/JavaFX-23-blue.svg" alt="JavaFX"></a></p>
+    <p><a href="https://spring.io/projects/spring-boot"><img
+          src="https://img.shields.io/badge/Spring%20Boot-3.x-green.svg" alt="Spring Boot"></a></p>
+    <p><a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-17-blue.svg"
+          alt="PostgreSQL"></a></p>
+    <p><a href="https://github.com/bilalobe/ProjectHub/actions/workflows/dependabot/dependabot-updates"><img
+          src="https://github.com/bilalobe/ProjectHub/actions/workflows/dependabot/dependabot-updates/badge.svg"
+          alt="Dependabot Updates"></a></p>
+    <p><a href="https://github.com/bilalobe/ProjectHub/actions/workflows/qodana_code_quality.yml"><img
+          src="https://github.com/bilalobe/ProjectHub/actions/workflows/qodana_code_quality.yml/badge.svg"
+          alt="Qodana"></a></p>
+    <p><a href="https://github.com/bilalobe/ProjectHub/actions/workflows/codeql.yml"><img
+          src="https://github.com/bilalobe/ProjectHub/actions/workflows/codeql.yml/badge.svg" alt="CodeQL Advanced"></a>
+    </p>
+    <p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"
+          alt="License"></a></p>
+    <h2 id="overview">Overview</h2>
+    <p>ProjectHub is a powerful and intuitive platform designed to streamline the management of student projects,
+      facilitate component evaluations, and simplify project distribution. It offers a rich desktop experience through
+      JavaFX and a responsive web interface with Angular, backed by a robust Spring Boot backend and PostgreSQL
+      database.</p>
+    <h2 id="features">Features</h2>
+    <ul>
+      <li>
+        <p><strong>Project Creation and Management</strong>: Easily create, edit, and manage student projects. Assign
+          projects to teams, define deadlines, and specify requirements.</p>
+      </li>
+      <li>
+        <p><strong>Component Evaluation</strong>: Evaluate project components that contribute to final deliverables.
+          Ensure quality submissions with an integrated evaluation system.</p>
+      </li>
+      <li>
+        <p><strong>Team Collaboration</strong>: Teams can view project details, submit project components, and track
+          their submissions.</p>
+      </li>
+      <li>
+        <p><strong>Secure Authentication</strong>: Robust user authentication mechanisms to protect data and ensure
+          secure access.</p>
+      </li>
+      <li>
+        <p><strong>Plugin Support</strong>: Extend functionality with plugins, such as the CSV plugin for data
+          import/export.</p>
+      </li>
+      <li>
+        <p><strong>Cross-Platform Availability</strong>: Access ProjectHub via the desktop client or the web interface.
+        </p>
+      </li>
+    </ul>
+    <h2 id="architecture">Architecture</h2>
+    <p>ProjectHub follows a modular architecture to promote scalability and maintainability:</p>
+    <ul>
+      <li>
+        <p><strong>Backend</strong>: Built with Spring Boot, providing RESTful APIs and business logic.</p>
+      </li>
+      <li>
+        <p><strong>Frontend Web Interface</strong>: Developed with Angular, offering a responsive and interactive user
+          experience.</p>
+      </li>
+      <li>
+        <p><strong>Desktop Client</strong>: Implemented using JavaFX for a rich desktop experience.</p>
+      </li>
+      <li>
+        <p><strong>Database</strong>: Utilizes PostgreSQL for reliable and efficient data storage.</p>
+      </li>
+      <li>
+        <p><strong>Plugins</strong>: Supports plugins to enhance and extend core functionalities.</p>
+      </li>
+    </ul>
+    <h2 id="getting-started">Getting Started</h2>
+    <h3 id="prerequisites">Prerequisites</h3>
+    <ul>
+      <li>
+        <p><strong>Java Development Kit (JDK) 21</strong> or higher</p>
+      </li>
+      <li>
+        <p><strong>Node.js</strong> and <strong>npm</strong> (for the Angular frontend)</p>
+      </li>
+      <li>
+        <p><strong>PostgreSQL</strong> database</p>
+      </li>
+      <li>
+        <p><strong>Gradle</strong> build tool (included via Gradle Wrapper)</p>
+      </li>
+    </ul>
+    <h3 id="installation">Installation</h3>
+    <h4 id="clone-the-repository">Clone the Repository</h4>
+    <pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">git</span>  clone  https://github.com/bilalobe/ProjectHub.git
+
+<span class="token function">cd</span>  ProjectHub
+
+</code></pre>
+    <h4 id="database-setup">Database Setup</h4>
+    <ol>
+      <li>
+        <p><strong>Install PostgreSQL</strong> if not already installed.</p>
+      </li>
+      <li>
+        <p><strong>Create a new database</strong> named <code>projecthub</code>:</p>
+      </li>
+    </ol>
+    <pre class=" language-sql"><code class="prism  language-sql">
+<span class="token keyword">CREATE</span>  <span class="token keyword">DATABASE</span> projecthub<span class="token punctuation">;</span>
+
+</code></pre>
+    <ol start="3">
+      <li><strong>Configure Database Connection</strong>:</li>
+    </ol>
+    <p>Update the database connection settings in</p>
+    <p>application.properties</p>
+    <p>or <code>application.yml</code>:</p>
+    <pre class=" language-properties"><code class="prism  language-properties">
+<span class="token attr-name">spring.datasource.url</span><span class="token punctuation">=</span><span class="token attr-value">jdbc:postgresql://localhost:5432/projecthub</span>
+
+<span class="token attr-name">spring.datasource.username</span><span class="token punctuation">=</span><span class="token attr-value">your_db_username</span>
+
+<span class="token attr-name">spring.datasource.password</span><span class="token punctuation">=</span><span class="token attr-value">your_db_password</span>
+
+</code></pre>
+    <h3 id="running-the-application">Running the Application</h3>
+    <h4 id="backend-spring-boot-application">Backend (Spring Boot Application)</h4>
+    <ol>
+      <li>Navigate to the app directory:</li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">cd</span> core
+
+</code></pre>
+    <ol start="2">
+      <li>Build and run the application:</li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+./gradlew bootRun
+
+</code></pre>
+    <p>The backend server will start on <code>http://localhost:8080</code>.</p>
+    <h4 id="frontend-angular-application">Frontend (Angular Application)</h4>
+    <ol>
+      <li>Open a new terminal and navigate to the frontend directory:</li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">cd</span> frontend
+
+</code></pre>
+    <ol start="2">
+      <li>Install dependencies:</li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">npm</span> <span class="token function">install</span>
+
+</code></pre>
+    <ol start="3">
+      <li>Run the development server:</li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+ng serve
+
+</code></pre>
+    <p>Access the web interface at <code>http://localhost:4200</code>.</p>
+    <h4 id="desktop-client-javafx-application">Desktop Client (JavaFX Application)</h4>
+    <ol>
+      <li>
+        <p>Ensure the backend is running.</p>
+      </li>
+      <li>
+        <p>Run the JavaFX application:</p>
+      </li>
+    </ol>
+    <pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">cd</span> desktop-ui
+
+./gradlew run
+
+</code></pre>
+    <h2 id="usage">Usage</h2>
+    <ul>
+      <li>
+        <p><strong>Access the Web Interface</strong>: Navigate to <code>http://localhost:4200</code> in your web
+          browser.</p>
+      </li>
+      <li>
+        <p><strong>Desktop Client</strong>: Launch the JavaFX application as described above.</p>
+      </li>
+      <li>
+        <p><strong>API Documentation</strong>: Access API endpoints and documentation at
+          <code>http://localhost:8080/swagger-ui.html</code> (if Swagger is configured).</p>
+      </li>
+      <li>
+        <p><strong>User Accounts</strong>: Register a new user or log in with your credentials to access features based
+          on your role (e.g., Teacher, Student).</p>
+      </li>
+    </ul>
+    <h2 id="contributing">Contributing</h2>
+    <p>We welcome contributions! Please read our Contributing Guidelines to get started.</p>
+    <ul>
+      <li>
+        <p><strong>Report Issues</strong>: Use the <a href="https://github.com/yourusername/ProjectHub/issues">GitHub
+            Issues</a> page to report bugs or request new features.</p>
+      </li>
+      <li>
+        <p><strong>Code of Conduct</strong>: Please adhere to our Code of Conduct to maintain a welcoming community.</p>
+      </li>
+    </ul>
+    <h2 id="security-policy">Security Policy</h2>
+    <p>For information on supported versions and reporting vulnerabilities, please refer to our Security Policy.</p>
+    <h2 id="license">License</h2>
+    <p>ProjectHub is licensed under the MIT License.</p>
+    <h2 id="contact">Contact</h2>
+    <p>For questions, support, or further information, please contact:</p>
+    <ul>
+      <li>
+        <p><strong>Email</strong>: <a href="mailto:support@projecthub.com">support@projecthub.com</a></p>
+      </li>
+      <li>
+        <p><strong>Project Repository</strong>: <a href="https://github.com/yourusername/ProjectHub">GitHub -
+            ProjectHub</a></p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
