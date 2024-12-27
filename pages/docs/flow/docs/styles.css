@@ -1,0 +1,504 @@
+/* styles.css */
+/* Consistent styling across documentation pages */
+
+/* Base Styles */
+body {
+    font-family: Aptos, Arial, sans-serif;
+    margin: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+h1,
+h2,
+h3 {
+    color: #2E86C1;
+    border-bottom: 2px solid #2E86C1;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2E86C1;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.entity {
+    margin-top: 40px;
+}
+
+.mermaid {
+    margin-top: 60px;
+    overflow-x: auto;
+}
+
+.section-description {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    table,
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    .mermaid {
+        width: 100%;
+    }
+}
+
+.explanation ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #777;
+}
+
+/* Navigation Styles */
+.documentation-links {
+    background-color: #2E86C1;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.documentation-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.documentation-links a:hover {
+    background-color: white;
+    color: #2E86C1;
+}
+
+/* Button Styles */
+button {
+    width: 255px;
+    text-align: left;
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #212529;
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+button:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border-color: #dee2e6;
+}
+
+@media screen and (max-width: 768px) {
+    button {
+        width: 140px;
+        font-size: 13px;
+    }
+}
+
+/* Interactive Elements */
+.interactive {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#sections {
+    margin-top: 20px;
+    text-align: left;
+    /* Added to align Quick Links to the left */
+}
+
+#sections section {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#sections section h2 {
+    margin-top: 0;
+}
+
+/* Adjust Quick Links Alignment */
+#sections .quick-links {
+    text-align: left;
+}
+
+#sections .quick-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#sections .quick-links li {
+    margin-bottom: 10px;
+}
+
+/* Additional Enhancements */
+a {
+    color: #2E86C1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1B4F72;
+}
+
+.button-primary {
+    background-color: #2874A6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-primary:hover {
+    background-color: #1B4F72;
+}
+
+.button-primary:active {
+    transform: scale(0.98);
+}
+
+/* Complementary Styles */
+
+/* RTL Support */
+body[dir="rtl"] {
+    direction: rtl;
+}
+
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] h3 {
+    border-left: 2px solid #2E86C1;
+    border-right: none;
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+body[dir="rtl"] .documentation-links a {
+    margin: 0 10px 0 0;
+}
+
+body[dir="rtl"] .documentation-links a:last-child {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Translation Notification */
+.translation-notice {
+    background-color: #FFEBD0;
+    border-left: 4px solid #F5CBA7;
+    border-radius: 4px;
+    color: #8E44AD;
+    border: none;
+    padding: 15px;
+    margin: 20px -20px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Improved Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Add to existing styles */
+
+.module-portal {
+    margin: 40px 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.treeview ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.module {
+    margin: 15px 0;
+}
+
+.module-name {
+    font-weight: bold;
+    color: #2E86C1;
+}
+
+.treeview a {
+    color: #333;
+    text-decoration: none;
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.treeview a:hover {
+    background: #f0f0f0;
+    color: #d1dee6;
+}
+
+/* Add to existing styles */
+
+.readme-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.readme-section .button-primary {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+}
+
+/* Additional styles */
+
+.welcome-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.toggle-btn {
+    background: #2E86C1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    position: relative;
+    padding-right: 35px;
+}
+
+.toggle-btn::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.expanded::after {
+    transform: rotate(180deg);
+}
+
+.collapsible {
+    display: none;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.module-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.module-content {
+    display: none;
+    padding: 10px 20px;
+}
+
+.module-content.expanded {
+    display: block;
+}
+
+.module-description {
+    color: #666;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.primary-link {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+/* Console */
+
+.console-portal {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: 'Consolas', monospace;
+}
+
+.console-header {
+    margin-bottom: 20px;
+}
+
+.console-header h2 {
+    color: #0f0;
+    border-bottom: 1px solid #0f0;
+}
+
+.console-window {
+    background: #000;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.console-line {
+    color: #0f0;
+    margin-bottom: 10px;
+}
+
+.console-output {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.console-output ul {
+    list-style: none;
+    padding: 0;
+}
+
+.console-output li {
+    margin: 5px 0;
+}
+
+.prompt {
+    color: #0f0;
+    margin-right: 10px;
+}
+
+.console-output a {
+    color: #5bf;
+    text-decoration: none;
+}
+
+.console-output a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Non-Copiable Page Styles */
+body.non-copiable {
+    user-select: none;
+    /* Disable text selection */
+    -webkit-user-select: none;
+    /* For Safari */
+    -moz-user-select: none;
+    /* For Firefox */
+    -ms-user-select: none;
+    /* For IE */
+}
+
+body.non-copiable *::selection {
+    background: transparent;
+    /* Remove highlight color */
+}
+
+/* Add to existing styles */
+
+.doc-navigation {
+    display: flex;
+    margin-top: 20px;
+    min-height: 600px;
+}
+
+.left-panel {
+    width: 250px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+}
+
+.content-panel {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel li {
+    margin: 10px 0;
+}
+
+.left-panel a {
+    color: #2E86C1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.left-panel a:hover {
+    color: #1B4F72;
+}
