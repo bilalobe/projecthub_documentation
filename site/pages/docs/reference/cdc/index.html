@@ -1,0 +1,1428 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive guides and technical documentation for ProjectHub" name="description"/>
+<link href="../changelog/" rel="prev"/>
+<link href="../../tables/rules/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.49" name="generator"/>
+<title>CDC - ProjectHub Documentation</title>
+<link href="../../../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ProjectHub Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="ProjectHub Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ProjectHub Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              CDC
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../sections/introduction/">
+          
+  
+  Documentation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flow/appsettings-management/">
+          
+  
+  Technical Guide
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../cover/">
+          
+  
+  Reference
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ProjectHub Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="ProjectHub Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    ProjectHub Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Documentation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/objectives/">
+<span class="md-ellipsis">
+    Objectives
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/project-scope/">
+<span class="md-ellipsis">
+    Project Scope
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/architecture/">
+<span class="md-ellipsis">
+    Architecture
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Management
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/project/">
+<span class="md-ellipsis">
+    Project
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/task/">
+<span class="md-ellipsis">
+    Task
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/resource/">
+<span class="md-ellipsis">
+    Resource
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/risk/">
+<span class="md-ellipsis">
+    Risk
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/sprints/">
+<span class="md-ellipsis">
+    Sprints
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sections/conclusion/">
+<span class="md-ellipsis">
+    Conclusion
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Technical Guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Technical Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/appsettings-management/">
+<span class="md-ellipsis">
+    App Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/appstart-management/">
+<span class="md-ellipsis">
+    App Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/dashboard-management/">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/loginregister-management/">
+<span class="md-ellipsis">
+    Login/Register
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/project-management/">
+<span class="md-ellipsis">
+    Project Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/task-management/">
+<span class="md-ellipsis">
+    Task Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/team-management/">
+<span class="md-ellipsis">
+    Team Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/user-management/">
+<span class="md-ellipsis">
+    User Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/cohort-management/">
+<span class="md-ellipsis">
+    Cohort Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flow/component-management/">
+<span class="md-ellipsis">
+    Component Flow
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cover/">
+<span class="md-ellipsis">
+    Cover
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../changelog/">
+<span class="md-ellipsis">
+    Changelog
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    CDC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tables/rules/">
+<span class="md-ellipsis">
+    Rules
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<!DOCTYPE  html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cahier des Charges - ProjectHub</title>
+<meta content="CDC-PH 1124 JFX-VFINAL" name="description"/>
+<style>
+
+body {
+
+font-family: sans-serif;
+
+line-height: 1.6;
+
+margin: 20px;
+
+color: #333;
+
+}
+
+
+
+h1,
+
+h2,
+
+h3 {
+
+color: #0056b3;
+
+}
+
+
+
+h1 {
+
+border-bottom: 2px  solid  #eee;
+
+padding-bottom: 10px;
+
+}
+
+
+
+ul,
+
+ol {
+
+margin-bottom: 20px;
+
+}
+
+
+
+table {
+
+width: 100%;
+
+border-collapse: collapse;
+
+margin-bottom: 20px;
+
+}
+
+
+
+th,
+
+td {
+
+border: 1px  solid  #ddd;
+
+padding: 8px;
+
+text-align: left;
+
+}
+
+
+
+th {
+
+background-color: #f2f2f2;
+
+}
+
+
+
+.mermaid {
+
+text-align: center;
+
+}
+
+
+
+.container {
+
+max-width: 900px;
+
+margin: auto;
+
+}
+
+
+
+.cover-page {
+
+text-align: center;
+
+padding: 50px;
+
+}
+
+
+
+.cover-page  h1 {
+
+font-size: 2.5em;
+
+margin-bottom: 20px;
+
+}
+
+
+
+.cover-page  h2 {
+
+font-size: 1.5em;
+
+margin-bottom: 10px;
+
+}
+
+
+
+.cover-page  h3 {
+
+font-size: 1.2em;
+
+margin-bottom: 5px;
+
+}
+
+
+
+hr {
+
+border: 0;
+
+border-top: 1px  solid  #eee;
+
+margin: 30px  0;
+
+}
+
+
+
+em {
+
+font-style: italic;
+
+}
+
+
+
+/* Style for the mermaid diagrams */
+
+.mermaid  svg {
+
+max-width: 100%;
+
+height: auto;
+
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+
+mermaid.initialize({ startOnLoad: true });
+
+</script>
+</head>
+<body class="non-copiable">
+<script>
+
+document.addEventListener('contextmenu', function(e) {
+
+e.preventDefault(); // Disable right-click
+
+});
+
+document.addEventListener('copy', function(e) {
+
+e.preventDefault(); // Disable copy
+
+});
+
+</script>
+<div class="container">
+<!-- Cover Page -->
+<div class="cover-page">
+<h1>Cahier des Charges</h1>
+<h2>CDC-PH 1124 JFX-VFINAL</h2>
+<hr/>
+<h3>Plateforme de Gestion de Projets Éducatifs</h3>
+<hr/>
+<p>Version: 1.0</p>
+<p>Auteur: BILAL EL KHATABI</p>
+<p>Date: 25/12/2024</p>
+</div>
+<hr/>
+<div style="height: 50px;"></div>
+<!-- Introduction -->
+<section>
+<h1>Introduction</h1>
+<p>
+
+Bienvenue ! <strong>ProjectHub</strong> est une plateforme que nous avons conçue pour vous aider à gérer
+
+les projets étudiants, évaluer les travaux et distribuer les sujets de manière plus efficace. L'idée est
+
+de simplifier et d'optimiser le travail, que vous soyez étudiant ou enseignant. Nous utilisons JavaFX,
+
+Spring Boot et PostgreSQL pour cela.
+
+</p>
+</section>
+<!-- Objectifs -->
+<section>
+<h2>Objectifs</h2>
+<ul>
+<li><strong>Gestion de projet simplifiée</strong> : Nous voulons vous offrir des outils faciles à
+
+utiliser pour créer, modifier et suivre vos projets.</li>
+<li><strong>Tâches organisées</strong> : La plateforme vous permet de répartir les tâches et de suivre
+
+leur avancement avec précision.</li>
+<li><strong>Ressources bien gérées</strong> : Nous nous assurons que les ressources sont utilisées de
+
+manière optimale.</li>
+<li><strong>Comptes sécurisés</strong> : La gestion des comptes utilisateurs est basée sur les rôles
+
+pour garantir la sécurité et la confidentialité.</li>
+</ul>
+</section>
+<!-- Portée du Projet -->
+<section>
+<h2>Portée du Projet</h2>
+<p>Voici les grands axes que nous allons couvrir :</p>
+<ol>
+<li><strong>Gestion des Projets</strong> : Création, suivi, etc.</li>
+<li><strong>Gestion des Tâches</strong> : Assignation, suivi d'avancement, etc.</li>
+<li><strong>Gestion des Ressources</strong> : Allocation, suivi d'utilisation, etc.</li>
+<li><strong>Gestion des Comptes</strong> : Inscription, rôles, permissions, etc.</li>
+</ol>
+</section>
+<!-- Gestion des Projets -->
+<section>
+<h2>1. Gestion des Projets</h2>
+<h3>Fonctionnalités</h3>
+<ul>
+<li>
+<p><strong>Éditer un Projet</strong></p>
+<ul>
+<li><strong>Description</strong> : Les enseignants peuvent créer et modifier les détails des
+
+projets.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Créer un nouveau projet avec des infos comme le nom, la description, les dates
+
+limites et les critères d'évaluation.</li>
+<li>Modifier les détails d'un projet existant.</li>
+<li>Supprimer un projet si besoin.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lister les Projets</strong></p>
+<ul>
+<li><strong>Description</strong> : Une liste de tous les projets disponibles.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Voir les projets en cours et ceux qui sont terminés.</li>
+<li>Filtrer les projets par statut, date ou autres critères.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Consulter les Détails d'un Projet</strong></p>
+<ul>
+<li><strong>Description</strong> : Accéder aux détails complets d'un projet spécifique.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Voir la description, les dates limites, les équipes assignées et les tâches
+
+associées.</li>
+<li>Accéder aux documents et ressources liés au projet.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Tableau des Règles de Gestion</h3>
+<table>
+<thead>
+<tr>
+<th>Règle ID</th>
+<th>Description de la Règle</th>
+<th>Conditions</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG-001</td>
+<td>Chaque projet doit avoir un nom unique.</td>
+<td>Lors de la création d'un projet.</td>
+<td>Vérifier que le nom n'existe pas déjà avant de sauvegarder.</td>
+</tr>
+<tr>
+<td>RG-002</td>
+<td>Les dates limites des projets doivent être dans le futur.</td>
+<td>Lors de la création ou modification.</td>
+<td>S'assurer que les dates limites ne sont pas passées.</td>
+</tr>
+<tr>
+<td>RG-003</td>
+<td>Seuls les enseignants peuvent créer ou modifier les projets.</td>
+<td>Contrôle d'accès.</td>
+<td>Restreindre les modifications aux utilisateurs autorisés.</td>
+</tr>
+<tr>
+<td>RG-004</td>
+<td>Un projet peut avoir plusieurs équipes assignées.</td>
+<td>Lors de l'assignation des équipes.</td>
+<td>Permettre l'ajout et la suppression d'équipes pour un projet.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Gestion des Tâches -->
+<section>
+<h2>2. Gestion des Tâches</h2>
+<h3>Fonctionnalités</h3>
+<ul>
+<li>
+<p><strong>Créer et Assigner des Tâches</strong></p>
+<ul>
+<li><strong>Description</strong> : Créer des tâches et les assigner aux membres de l'équipe.
+
+</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Définir le titre, la description, la priorité et les dates limites des tâches.</li>
+<li>Assigner des tâches aux membres de l'équipe.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Suivre l'Avancement des Tâches</strong></p>
+<ul>
+<li><strong>Description</strong> : Voir l'état d'avancement des différentes tâches.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Mettre à jour le statut des tâches (À faire, En cours, Terminé).</li>
+<li>Générer des rapports d'avancement.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Notifier les Membres des Équipes</strong></p>
+<ul>
+<li><strong>Description</strong> : Envoyer des notifications lors de la création ou de la mise à
+
+jour des tâches.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Envoyer des emails ou des notifications in-app.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Tableau des Règles de Gestion</h3>
+<table>
+<thead>
+<tr>
+<th>Règle ID</th>
+<th>Description de la Règle</th>
+<th>Conditions</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG-005</td>
+<td>Chaque tâche doit être assignée à au moins un membre.</td>
+<td>Lors de la création d'une tâche.</td>
+<td>Obliger la sélection d'un membre lors de l'assignation.</td>
+</tr>
+<tr>
+<td>RG-006</td>
+<td>Les dates limites des tâches doivent être dans le cadre du projet.</td>
+<td>Lors de la définition des dates limites.</td>
+<td>S'assurer que la date limite d'une tâche est avant celle du projet.</td>
+</tr>
+<tr>
+<td>RG-007</td>
+<td>Les priorités des tâches doivent être définies (Haute, Moyenne, Basse).</td>
+<td>Lors de la création ou modification des tâches.</td>
+<td>Restreindre les options de priorité à celles proposées.</td>
+</tr>
+<tr>
+<td>RG-008</td>
+<td>Seuls les membres assignés peuvent modifier le statut des tâches.</td>
+<td>Contrôle d'accès.</td>
+<td>Autoriser uniquement les membres assignés à mettre à jour les statuts.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Gestion des Ressources -->
+<section>
+<h2>3. Gestion des Ressources</h2>
+<h3>Fonctionnalités</h3>
+<ul>
+<li>
+<p><strong>Ajouter et Gérer les Ressources</strong></p>
+<ul>
+<li><strong>Description</strong> : Ajouter les ressources nécessaires pour les projets.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Ajouter des ressources matérielles et logicielles.</li>
+<li>Gérer la disponibilité et l'allocation des ressources.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Suivre l'Utilisation des Ressources</strong></p>
+<ul>
+<li><strong>Description</strong> : Suivre l'utilisation des ressources allouées aux projets.
+
+</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Générer des rapports sur l'utilisation des ressources.</li>
+<li>Identifier les ressources sur-utilisées ou sous-utilisées.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimiser l'Allocation des Ressources</strong></p>
+<ul>
+<li><strong>Description</strong> : Allouer efficacement les ressources en fonction des besoins
+
+des projets.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Réassigner les ressources en cas de déséquilibre.</li>
+<li>Planifier l'acquisition de nouvelles ressources si nécessaire.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Tableau des Règles de Gestion</h3>
+<table>
+<thead>
+<tr>
+<th>Règle ID</th>
+<th>Description de la Règle</th>
+<th>Conditions</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG-009</td>
+<td>Une ressource ne peut être allouée qu'à un seul projet à la fois.</td>
+<td>Lors de l'allocation des ressources.</td>
+<td>Vérifier la disponibilité avant l'allocation.</td>
+</tr>
+<tr>
+<td>RG-010</td>
+<td>Les ressources doivent être enregistrées avec des détails complets.</td>
+<td>Lors de l'ajout des ressources.</td>
+<td>Obliger la saisie des informations (type, quantité, etc.).</td>
+</tr>
+<tr>
+<td>RG-011</td>
+<td>Les rapports d'utilisation doivent être générés mensuellement.</td>
+<td>Génération des rapports.</td>
+<td>Automatiser la création et la distribution des rapports.</td>
+</tr>
+<tr>
+<td>RG-012</td>
+<td>Seuls les administrateurs peuvent ajouter ou supprimer des ressources.</td>
+<td>Contrôle d'accès.</td>
+<td>Restreindre la gestion des ressources aux administrateurs.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Gestion des Comptes -->
+<section>
+<h2>4. Gestion des Comptes</h2>
+<h3>Fonctionnalités</h3>
+<ul>
+<li>
+<p><strong>Inscription et Authentification des Utilisateurs</strong></p>
+<ul>
+<li><strong>Description</strong> : Permettre aux utilisateurs de s'inscrire et de se connecter à
+
+la plateforme.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Créer un compte avec les informations personnelles.</li>
+<li>S'authentifier avec un nom d'utilisateur et un mot de passe.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestion des Rôles et Permissions</strong></p>
+<ul>
+<li><strong>Description</strong> : Assurer que chaque utilisateur a les permissions appropriées
+
+selon son rôle.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Attribuer des rôles (Administrateur, Enseignant, Étudiant).</li>
+<li>Définir des permissions spécifiques pour chaque rôle.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestion des Profils Utilisateurs</strong></p>
+<ul>
+<li><strong>Description</strong> : Permettre aux utilisateurs de gérer leurs profils.</li>
+<li><strong>Actions</strong> :
+
+<ul>
+<li>Modifier les informations du profil.</li>
+<li>Réinitialiser le mot de passe.</li>
+<li>Mettre à jour les préférences de notification.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Tableau des Règles de Gestion</h3>
+<table>
+<thead>
+<tr>
+<th>Règle ID</th>
+<th>Description de la Règle</th>
+<th>Conditions</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG-013</td>
+<td>Les mots de passe doivent respecter une politique de sécurité.</td>
+<td>Lors de la création ou modification du mot de passe.</td>
+<td>Exiger des règles de complexité (longueur, caractères spéciaux, etc.).</td>
+</tr>
+<tr>
+<td>RG-014</td>
+<td>Les utilisateurs doivent confirmer leur email lors de l'inscription.</td>
+<td>Lors de l'inscription.</td>
+<td>Envoyer un email de confirmation et vérifier avant d'activer le compte.</td>
+</tr>
+<tr>
+<td>RG-015</td>
+<td>Seuls les administrateurs peuvent attribuer ou modifier les rôles.</td>
+<td>Gestion des rôles.</td>
+<td>Restreindre l'accès à la gestion des rôles aux administrateurs.</td>
+</tr>
+<tr>
+<td>RG-016</td>
+<td>Les sessions utilisateurs doivent expirer après une période d'inactivité.</td>
+<td>Sécurité des sessions.</td>
+<td>Configurer l'expiration automatique des sessions.</td>
+</tr>
+<tr>
+<td>RG-017</td>
+<td>Les critères d'évaluation des projets doivent être définis à la création.</td>
+<td>Configuration du projet.</td>
+<td>Exiger une grille d'évaluation avant l'activation du projet.</td>
+</tr>
+<tr>
+<td>RG-018</td>
+<td>Les notes finales doivent être approuvées par au moins deux enseignants.</td>
+<td>Soumission des notes.</td>
+<td>Bloquer la finalisation des notes jusqu'à une deuxième approbation.</td>
+</tr>
+<tr>
+<td>RG-019</td>
+<td>Les étudiants peuvent faire appel des notes dans un délai de 5 jours.</td>
+<td>Publication des notes.</td>
+<td>Activer une fenêtre d'appel avec un système de notification.</td>
+</tr>
+<tr>
+<td>RG-020</td>
+<td>Les équipes doivent avoir entre 2 et 6 membres.</td>
+<td>Formation des équipes.</td>
+<td>Valider la taille de l'équipe lors de la création et des modifications.</td>
+</tr>
+<tr>
+<td>RG-021</td>
+<td>Les étudiants ne peuvent être que dans une seule équipe par projet.</td>
+<td>Assignation des équipes.</td>
+<td>Vérifier les appartenances existantes avant d'ajouter à une équipe.</td>
+</tr>
+<tr>
+<td>RG-022</td>
+<td>Les chefs d'équipe doivent être élus par les membres de l'équipe.</td>
+<td>Configuration de l'équipe.</td>
+<td>Exiger un vote majoritaire pour la sélection du chef d'équipe.</td>
+</tr>
+<tr>
+<td>RG-023</td>
+<td>Les soumissions de projet doivent être dans des formats approuvés.</td>
+<td>Téléchargement des fichiers.</td>
+<td>Valider les types de fichiers par rapport à une liste blanche.</td>
+</tr>
+<tr>
+<td>RG-024</td>
+<td>Limite de taille des fichiers de 100MB par soumission.</td>
+<td>Validation des téléchargements.</td>
+<td>Appliquer une limite de taille avec une option de compression.</td>
+</tr>
+<tr>
+<td>RG-025</td>
+<td>Conserver l'historique des versions des fichiers pendant 30 jours.</td>
+<td>Gestion du stockage.</td>
+<td>Mettre en œuvre un système de contrôle de version.</td>
+</tr>
+<tr>
+<td>RG-026</td>
+<td>Avertissement des échéances critiques 48 heures à l'avance.</td>
+<td>Suivi du temps.</td>
+<td>Envoyer des rappels automatisés.</td>
+</tr>
+<tr>
+<td>RG-027</td>
+<td>Les membres de l'équipe sont notifiés de tous les changements de statut des tâches.</td>
+<td>Mises à jour des tâches.</td>
+<td>Envoyer des notifications aux utilisateurs concernés.</td>
+</tr>
+<tr>
+<td>RG-028</td>
+<td>Rapports d'avancement hebdomadaires aux enseignants.</td>
+<td>Rapports.</td>
+<td>Générer et envoyer des rapports automatisés.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Planning des Sprints -->
+<section>
+<h2>5. Planning des Sprints</h2>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Dates</th>
+<th>Objectifs</th>
+<th>User Stories</th>
+<th>Règles de Gestion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 1</td>
+<td>17/12/2024 - 31/12/2024</td>
+<td>
+<ul>
+<li>Mise en place initiale</li>
+<li>Authentification et utilisateurs</li>
+<li>Base de données</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Configuration Spring Boot/Security</li>
+<li>CRUD Utilisateurs</li>
+<li>Gestion des rôles</li>
+</ul>
+</td>
+<td>RG-013, RG-014, RG-015, RG-016</td>
+</tr>
+<tr>
+<td>Sprint 2</td>
+<td>01/01/2025 - 14/01/2025</td>
+<td>
+<ul>
+<li>Gestion des projets</li>
+<li>Gestion des équipes</li>
+<li>Critères d'évaluation</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>CRUD Projets</li>
+<li>CRUD Équipes</li>
+<li>Configuration de l'évaluation</li>
+</ul>
+</td>
+<td>RG-001, RG-002, RG-003, RG-004, RG-017, RG-020, RG-021</td>
+</tr>
+<tr>
+<td>Sprint 3</td>
+<td>15/01/2025 - 29/01/2025</td>
+<td>
+<ul>
+<li>Gestion des tâches</li>
+<li>Notifications</li>
+<li>Rapports</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>CRUD Tâches</li>
+<li>Système de notifications</li>
+<li>Rapports hebdomadaires</li>
+</ul>
+</td>
+<td>RG-005, RG-006, RG-007, RG-008, RG-026, RG-027, RG-028</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Architecture du Système -->
+<section>
+<h2>6. Architecture du Système</h2>
+<div class="mermaid">
+
+C4Context
+
+title Diagramme de Contexte du Système - ProjectHub
+
+
+
+Person_Ext(student, "Étudiant", "Participe aux projets")
+
+Person_Ext(teacher, "Enseignant", "Gère projets et évaluations")
+
+Person_Ext(admin, "Administrateur", "Administration système")
+
+
+
+System(projecthub, "ProjectHub", "Plateforme de Gestion de Projets Éducatifs")
+
+
+
+System_Ext(mailSystem, "Système Email", "Notifications")
+
+System_Ext(storageSystem, "Stockage", "Gestion fichiers")
+
+System_Ext(csvSystem, "Import/Export", "Gestion CSV")
+
+
+
+Rel(student, projecthub, "Consulte les projets, soumet son travail")
+
+Rel(teacher, projecthub, "Crée et gère les projets, évalue")
+
+Rel(admin, projecthub, "Administre les utilisateurs et les ressources")
+
+
+
+Rel(projecthub, mailSystem, "Envoie des notifications")
+
+Rel(projecthub, storageSystem, "Stocke les fichiers")
+
+Rel(projecthub, csvSystem, "Importe et exporte les données")
+
+</div>
+</section>
+<!-- Gestion des Risques -->
+<section>
+<h2>7. Gestion des Risques</h2>
+<div class="mermaid">
+
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#FFCC00', 'edgeLabelBackground':
+
+'#ffffee', 'secondaryColor': '#F8F8F8', 'tertiaryColor': '#B3B3B3', 'primaryTextColor': '#000000',
+
+'lineColor': '#333333'}}}%%
+
+quadrantChart
+
+title Matrice des Risques
+
+x-axis Impact
+
+y-axis Probability
+
+quadrant-1 Monitoring
+
+quadrant-2 Major Risks
+
+quadrant-3 Minor Risks
+
+quadrant-4 Attention
+
+"Data Loss": [0.8, 0.9]
+
+"Security Breach": [0.9, 0.7]
+
+"Performance": [0.6, 0.5]
+
+"Downtime": [0.4, 0.8]
+
+"Integration": [0.5, 0.4]
+
+"Adoption": [0.7, 0.6]
+
+</div>
+<h3>Stratégies de Mitigation</h3>
+<p>
+
+Pour chaque risque identifié, nous avons défini des stratégies de mitigation appropriées afin de réduire
+
+l'impact potentiel sur le projet.
+
+</p>
+<h3>Tableau des Risques</h3>
+<table>
+<thead>
+<tr>
+<th>Risque</th>
+<th>Impact</th>
+<th>Probabilité</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perte de données</td>
+<td>Critique</td>
+<td>Moyenne</td>
+<td>
+<ul>
+<li>Sauvegardes automatiques quotidiennes</li>
+<li>Réplication des données</li>
+<li>Validation des sauvegardes</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Faille de sécurité</td>
+<td>Critique</td>
+<td>Faible</td>
+<td>
+<ul>
+<li>Audits réguliers</li>
+<li>Tests de pénétration</li>
+<li>Chiffrement des données sensibles</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Modéré</td>
+<td>Moyenne</td>
+<td>
+<ul>
+<li>Surveillance continue</li>
+<li>Tests de charge</li>
+<li>Optimisation du code</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Indisponibilité</td>
+<td>Élevé</td>
+<td>Faible</td>
+<td>
+<ul>
+<li>Architecture hautement disponible</li>
+<li>Plan de reprise d'activité</li>
+<li>Surveillance 24h/24 et 7j/7</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Intégration</td>
+<td>Modéré</td>
+<td>Moyenne</td>
+<td>
+<ul>
+<li>Tests d'intégration automatisés</li>
+<li>Documentation détaillée</li>
+<li>Environnement de staging</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Adoption</td>
+<td>Élevé</td>
+<td>Moyenne</td>
+<td>
+<ul>
+<li>Formation des utilisateurs</li>
+<li>Support réactif</li>
+<li>Feedback continu</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Conclusion -->
+<section>
+<h2>Conclusion</h2>
+<p>
+
+Voilà, ce cahier des charges vous donne les grandes lignes de <strong>ProjectHub</strong>. En gérant
+
+efficacement les projets, les tâches, les ressources et les comptes, nous voulons que cette plateforme
+
+soit un outil facile à utiliser et sécurisé pour tout le monde.
+
+</p>
+<hr/>
+<p>
+<em>Ce document est susceptible d'être mis à jour et ajusté en fonction de l'évolution du projet et de
+
+vos retours.</em>
+</p>
+</section>
+</div>
+</body>
+</html>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "navigation.tracking", "navigation.top", "search.highlight", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

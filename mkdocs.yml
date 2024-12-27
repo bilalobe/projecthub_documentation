@@ -1,0 +1,79 @@
+site_name: ProjectHub Documentation
+site_description: Comprehensive guides and technical documentation for ProjectHub
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+    - search
+    - mermaid2
+
+
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Documentation:
+    - Getting Started:
+      - Introduction: pages/docs/sections/introduction.md
+      - Objectives: pages/docs/sections/objectives.md
+      - Project Scope: pages/docs/sections/project-scope.md
+      - Architecture: pages/docs/sections/architecture.md
+    - Management:
+      - Project: pages/docs/sections/project.md
+      - Task: pages/docs/sections/task.md
+      - Resource: pages/docs/sections/resource.md
+      - Risk: pages/docs/sections/risk.md
+    - Development:
+      - Sprints: pages/docs/sections/sprints.md
+      - Conclusion: pages/docs/sections/conclusion.md
+  - Technical Guide:
+      - App Settings: pages/docs/flow/appsettings-management.md
+      - App Start: pages/docs/flow/appstart-management.md
+      - Dashboard: pages/docs/flow/dashboard-management.md
+      - Login/Register: pages/docs/flow/loginregister-management.md
+      - Project Flow: pages/docs/flow/project-management.md
+      - Task Flow: pages/docs/flow/task-management.md
+      - Team Flow: pages/docs/flow/team-management.md
+      - User Flow: pages/docs/flow/user-management.md
+      - Cohort Flow: pages/docs/flow/cohort-management.md
+      - Component Flow: pages/docs/flow/component-management.md
+
+  - Reference:
+    - Cover: pages/docs/reference/cover.md
+    - Changelog: pages/docs/reference/changelog.md
+    - CDC: pages/docs/reference/cdc.md
+    - Rules: pages/docs/tables/rules.md
